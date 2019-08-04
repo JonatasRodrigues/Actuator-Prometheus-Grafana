@@ -1,0 +1,28 @@
+version : '3'
+services:
+    grafana:
+      image: grafana/grafana:5.4.2
+      ports:
+       - 3000:3000
+      depends_on:
+       - prom
+      container_name: grafana
+
+    prom:
+     image: prom/prometheus:v2.6.0
+     volumes:
+       - ./prometheus.yml:/etc/prometheus/prometheus.yml
+     command: "--config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/prometheus"
+     ports:
+       - 9090:9090
+     depends_on:
+       - app
+     container_name: prometheus
+
+    app:
+     build:
+       context: .
+       dockerfile: app.dockerfile
+     ports:
+       - 8080:8080
+     container_name: spring-boot

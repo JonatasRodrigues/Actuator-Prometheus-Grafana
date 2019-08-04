@@ -1,3 +1,6 @@
+[![CircleCI](https://circleci.com/gh/JonatasRodrigues/Actuator-Prometheus-Grafana.svg?style=svg)](https://circleci.com/gh/JonatasRodrigues/Actuator-Prometheus-Grafana)
+
+
 # Description
 
 Java Application Health Check with SpringBoot Actuator, Prometheus, Grafana, circleCi and Docker Compose.

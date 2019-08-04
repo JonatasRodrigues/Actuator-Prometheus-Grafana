@@ -9,7 +9,7 @@ Java Application Health Check with SpringBoot Actuator, Prometheus, Grafana, cir
 
 <li>Java 1.8.0_171</li>
 <li>Maven 3.5.2</li>
-<li>Promethes</li>
+<li>Prometheus</li>
 <li>Grafana</li>
 <li>Docker CE 18+</li>
 <li>Docker Compose</li>
